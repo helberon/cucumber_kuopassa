@@ -6,11 +6,11 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.thucydides.core.annotations.Steps;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.LoginBlock;
+import pages.LoginPage;
 import steps.DefaultStepsData;
-import steps.LoginBlockSteps;
 
 public class LoginBlockStepDef extends DefaultStepsData {
 
@@ -33,6 +33,8 @@ public class LoginBlockStepDef extends DefaultStepsData {
 
     @Then("I see error message")
     public void verifyErrorMessage() {
+        loginPage= new LoginPage(driver);
+        Assert.assertTrue(loginPage.getBadLoginAlert().isDisplayed());
     }
 
     @After
