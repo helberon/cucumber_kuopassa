@@ -1,4 +1,5 @@
 Feature: Login on site
+
   @debug
   Scenario: I want to see error message when I enter wrong credentials
     Given I am on main page
