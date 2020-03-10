@@ -1,8 +1,9 @@
 package steps;
 
+import net.thucydides.core.steps.ScenarioSteps;
 import pages.*;
 
-public class DefaultStepsData {
+public class DefaultStepsData extends ScenarioSteps {
 
     protected LoginBlock loginBlock;
     protected LoginPage loginPage;

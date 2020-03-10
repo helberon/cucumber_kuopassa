@@ -1,11 +1,7 @@
 package stepsDef;
 
-import driverFactory.DriverProvider;
-import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.AboutUsPage;
@@ -15,14 +11,12 @@ import steps.DefaultStepsData;
 public class AboutUsStepDef extends DefaultStepsData {
     private WebDriver driver;
 
-    @Step
     @When("I go to About Us page")
     public void goToAboutUsPage() {
         footerBlock = new FooterBlock(driver);
         footerBlock.goToAboutUsPage();
     }
 
-    @Step
     @Then("I see correct text")
     public void checkTextCorrectness() {
         aboutUsPage = new AboutUsPage(driver);

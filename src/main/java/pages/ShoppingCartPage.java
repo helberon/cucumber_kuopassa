@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 public class ShoppingCartPage extends BasePage {
     private WebDriver driver;
 
-    @FindBy(id = "box-checkout-cart")
+    @FindBy(xpath = "//div[@id='box-checkout-cart']")
     private WebElement shoppingCartTable;
 
 
